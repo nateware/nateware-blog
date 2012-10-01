@@ -2,22 +2,21 @@
 # http://mikeferrier.com/2011/04/29/blogging-with-jekyll-haml-sass-and-jammit/
 #
 
-# desc "Parse haml layouts"
-# task :parse_haml do
-#   print "Parsing Haml layouts..."
-#   system(%{
-#     cd _layouts/haml && 
-#     for f in *.haml; do [ -e $f ] && haml $f ../${f%.haml}.html; done
-#   })
-#   puts "done."
-# end
-
 # rsync
 PROD_DEST = 'nateware.com:vhosts/nateware.com'
 
+desc "Parse haml layouts"
+task :parse_haml do
+  print "Parsing Haml layouts..."
+  Dir.chdir('_layouts') do
+    sh(%{ for f in *.haml; do bundle exec haml $f ${f%.haml}.html; done })
+  end
+  puts "done."
+end
+
 desc "Launch preview environment"
 task :preview do
-  # Rake::Task["parse_haml"].invoke
+  Rake::Task["parse_haml"].invoke
   sh "bundle exec jekyll --auto --server"
 end
 
@@ -39,7 +38,5 @@ end
 
 desc "Deploy latest code in _site to production"
 task :deploy do
-  sh(%{
-    rsync -avz --delete _site/ #{PROD_DEST}
-  })
+  sh(%{ rsync -avz --delete _site/ #{PROD_DEST} })
 end

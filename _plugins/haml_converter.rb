@@ -13,8 +13,13 @@ module Jekyll
     end
 
     def convert(content)
-      engine = Haml::Engine.new(content)
-      engine.render
+      begin
+        puts "Performing HAML Conversion."
+        engine = Haml::Engine.new(content)
+        engine.render
+      rescue => e
+        puts "!!! HAML Error: " + e.message
+      end
     end
   end
 end
