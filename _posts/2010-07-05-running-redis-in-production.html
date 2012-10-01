@@ -1,0 +1,25 @@
+---
+layout: post
+title: Running Redis in Production
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '1659912'
+---
+We've been running Redis in production for a while now, and it works well overall.  There are some gotchas to be aware of, though, which are worth knowing about.
+
+<h2>Redis Backups</h2>
+There's two ways to configure Redis in terms of backups: A periodic full dump ("bgsave") or an RDBMS-style transaction log ("appendonly").  Both have their pros and cons.  We use bgsave because we can afford the memory footprint and it's simpler.  If using bgsave, you need to have a system with double the memory of your dataset - so if you have 7gb of keys, you need 14gb of memory.  This is because Redis forks a process and copies the entire dataset to a file - so the whole thing has to be in memory twice.
+
+But if you can afford to do it, backups are a slam-dunk.  Since we run on <a href="http://aws.amazon.com/ec2/" title="Amazon EC2 site" target="_blank">EC2</a>, we simply run a script from cron that periodically uploads the <code>dump.rdb</code> file to <a href="http://aws.amazon.com/s3/" title="Amazon S3 site" target="_blank">S3</a>.  Each time the script runs, it uploads two copies: one named <code>%Y%m%d%H%M%S.rdb</code> and another named <code>latest.rdb</code>.  This is a dead-simple way of versioning your backups, or if you want the latest one, just download <code>latest.rdb</code>.  (Note: Make sure to set the S3 ACLs to private or else the world can download your data.)
+
+<h2>Troubleshooting Redis is a Pain</h2>
+Unfortunately, Redis is seriously lacking in the way of tools because it is still young.  There is the PHP <a title="Redis Admin" href="http://code.google.com/p/redis-admin/">Redis Admin</a> app, but its development appears to have stalled.  Beyond that it's pretty much roll-your-own-scripts at this point.  (We've thought about developing a general-purpose Redis app/tool ourselves, but with the Redis 2.0 changes and <a title="Antirez gets a job" href="http://antirez.com/post/vmware-the-new-redis-home.html">VMWare hiring Salvatore</a>, the tools side is a bit "wait and see".)
+
+So before you start throwing all of your critical data into Redis, realize it's a bit black-box at this point (or at least, a really dark gray).  I'm not a GUI guy personally - I prefer command-line tools due to my sysadmin days - but for many programmers, GUI tools help debugging <em>a lot</em>.  You need to make sure your programmers working with Redis can debug it when you have problems, which means a bigger investment in scripts vs. just downloading <a title="MySQL Workbench" href="http://wb.mysql.com/">MySQL Workbench</a> or <a title="Oracle SQL Developer" href="http://www.oracle.com/technology/products/database/sql_developer/index.html">Oracle SQL Developer</a>.
+
+<h2>Occasional Redis Bugs / Hangs</h2>
+As I <a href="http://groups.google.com/group/redis-db/browse_thread/thread/a75eddd21daff278/82d78891af72aa76" title="post about redis server hangs">posted to the redis-rb google group</a>, we have seen behavior such as timeouts and hangs under high load in production.  Usually we can recover from these due to logic we've written in our app, but there are situations where it has
+
