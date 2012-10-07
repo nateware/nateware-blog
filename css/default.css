@@ -157,6 +157,11 @@ Thanks for using Azure!
 
 body {
     font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p {
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
     width: 100%;
 }
 
@@ -185,7 +190,8 @@ img {
     border-bottom: 5px solid rgba(33, 33, 33, 0.4);
     text-align: left;
     padding: 0.6em;
-    padding-left: 100px;
+    /*padding-left: 100px;*/
+    padding-left: 40px;
     margin-bottom: 1.5em;
     color: #fff;
 }
