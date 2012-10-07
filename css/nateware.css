@@ -3,9 +3,37 @@
  */
 
 img.rounded {
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
+/* http://www.w3schools.com/css/css_list.asp */
+/*
+ul.fancy {
+  list-style-type: square;
+  list-style-image: url('/images/list-style1.png');
+}
+*/
 
+ul.fancy {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul.fancy ul {
+  list-style-type: none;
+}
+
+ul.fancy ul li {
+  background-image: url('/images/list-style1.png');
+  background-repeat: no-repeat;
+  background-position: 0px 1px; 
+  padding-left: 22px; 
+}
+
+div.navbar {
+  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}

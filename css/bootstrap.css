@@ -144,7 +144,7 @@ textarea {
 body {
   margin: 0;
   font-family: 'Droid Serif', Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 22px;
   color: #333333;
   background-color: #ffffff;
@@ -656,7 +656,7 @@ blockquote {
 }
 blockquote p {
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   line-height: 27.5px;
 }
@@ -1115,7 +1115,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: normal;
   line-height: 22px;
 }
@@ -1150,7 +1150,7 @@ input[type="color"],
   height: 22px;
   padding: 4px 6px;
   margin-bottom: 9px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 22px;
   color: #555555;
   -webkit-border-radius: 3px;
@@ -1633,7 +1633,7 @@ select:focus:required:invalid:focus {
   position: relative;
   margin-bottom: 0;
   *margin-left: 0;
-  font-size: 16px;
+  font-size: 15px;
   vertical-align: top;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
@@ -1652,9 +1652,9 @@ select:focus:required:invalid:focus {
   display: inline-block;
   width: auto;
   height: 22px;
-  min-width: 16px;
+  min-width: 15px;
   padding: 4px 5px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: normal;
   line-height: 22px;
   text-align: center;
@@ -1879,7 +1879,7 @@ legend + .control-group {
   *zoom: 1;
   padding: 4px 14px;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 22px;
   *line-height: 22px;
   text-align: center;
@@ -2615,7 +2615,7 @@ input[type="submit"].btn.btn-mini {
 }
 .icon-random {
   background-position: -216px -120px;
-  width: 16px;
+  width: 15px;
 }
 .icon-comment {
   background-position: -240px -120px;
@@ -2640,7 +2640,7 @@ input[type="submit"].btn.btn-mini {
 }
 .icon-folder-open {
   background-position: -408px -120px;
-  width: 16px;
+  width: 15px;
 }
 .icon-resize-vertical {
   background-position: -432px -119px;
@@ -2749,7 +2749,7 @@ input[type="submit"].btn.btn-mini {
 }
 .btn-group > .btn,
 .btn-group > .dropdown-menu {
-  font-size: 16px;
+  font-size: 15px;
 }
 .btn-group > .btn-mini {
   font-size: 11px;
@@ -2758,7 +2758,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 12px;
 }
 .btn-group > .btn-large {
-  font-size: 16px;
+  font-size: 15px;
 }
 .btn-group > .btn:first-child {
   margin-left: 0;
