@@ -41,5 +41,8 @@ ul.fancy ul li {
 
 div.navbar {
   font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
+p.author {
+  display: inline;
 }

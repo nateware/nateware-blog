@@ -9,7 +9,7 @@ desc "Parse haml layouts"
 task :parse_haml do
   print "Parsing Haml layouts..."
   Dir.chdir('_layouts') do
-    sh(%{ for f in *.haml; do bundle exec haml $f ${f%.haml}.html; done })
+    sh(%{ for f in `ls *.haml`; do bundle exec haml $f ${f%.haml}.html; done })
   end
   puts "done."
 end
