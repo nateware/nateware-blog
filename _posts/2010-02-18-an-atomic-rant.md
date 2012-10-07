@@ -2,12 +2,15 @@
 layout: post
 title: An Atomic Rant
 tags:
-- Techie Bits
+- ruby
+- redis
+- programming
 status: publish
 type: post
 published: true
-summary: "You are probably not handling atomic operations properly in your app, and probably have some nasty lurking race conditions. The worst part is these will get worse as your user count increases, are difficult to reproduce, and usually happen in your most critical pieces of code. (And no, your unit tests can’t catch them either.)"
+summary: "You are probably not handling atomic operations properly in your app, and probably have some nasty lurking race conditions. The worst part is these will get worse as your user count increases, are difficult to reproduce, and usually happen in your most critical pieces of code. (And no, your unit tests can't catch them either.)"
 ---
+
 Spoiler: If you're part of the ADHD generation and want to skip learning and go straight to the punchline, use Redis and <a href="http://github.com/nateware/redis-objects">redis-objects</a> for all your atomic data needs.
 
 Brush Up Your Resume
@@ -24,15 +27,15 @@ Let’s assume you’re writing an app to enable students to enroll in courses. 
       # course is full
     end
 
-You’re screwed. You now have 32 people in your 30 person class, and you have no idea what happened.
+You're screwed. You now have 32 people in your 30 person class, and you have no idea what happened.
 
-"Well no duh," you’re saying, "even the <a href="http://api.rubyonrails.org/classes/ActiveRecord/Locking/Pessimistic.html">ActiveRecord docs mention locking</a>, so I’ll just use that."
+"Well no duh," you're saying, "even the <a href="http://api.rubyonrails.org/classes/ActiveRecord/Locking/Pessimistic.html">ActiveRecord docs mention locking</a>, so I'll just use that."
 
     @course = Course.find(1, :lock => true)
     if @course.num_students < 30
       # ...
 
-Nice try, but now you’ve introduced other issues. Any other piece of code in your *entire app* that needs to update *anything* about the course - maybe the course name, or start date, or location - is now serialized. If you need high concurrency, you’re screwed (still).
+Nice try, but now you've introduced other issues. Any other piece of code in your *entire app* that needs to update *anything* about the course - maybe the course name, or start date, or location - is now serialized. If you need high concurrency, you’re screwed (still).
 
 You think, "ah-ha, the problem is having a separate counter!"
 
@@ -47,11 +50,11 @@ Nope. Still screwed.
 
 The Root Down
 -------------
-It’s worth understanding the root issue, and how to address it.
+It's worth understanding the root issue, and how to address it.
 
 Race conditions arise from the difference in time between *evaluating* and *altering* a value. In our example, we fetched the record, then checked the value, then changed it. The more lines of code between those operations, and the higher your user count, the bigger the window of opportunity for other clients to get the data in an inconsistent state.
 
-Sometimes race conditions don’t matter in practice, since often a user is only operating on their own data. This has a race condition, but is probably ok:
+Sometimes race conditions don't matter in practice, since often a user is only operating on their own data. This has a race condition, but is probably ok:
 
     @user = User.find(params[:id])
     @post = Post.create(:user_id => @user.id, :title => "Whattup")
@@ -80,7 +83,7 @@ The DB says 1000, but your @blog object still says 999, and the right person doe
 
 A Better Way
 ------------
-Bottom line: Any operation that can alter a value <strong>must</strong> return that value in the <em>same operation</em> for it to be atomic. If you do a separate get then set, or set then get, you’re open to a race condition. There are very few systems that support an "increment and return" type operation, and Redis is one of them (Oracle sequences are another).
+Bottom line: Any operation that can alter a value must also return that value in the *same operation* for it to be atomic. If you do a separate get then set, or set then get, you're open to a race condition. There are only a few systems that support an "increment and return" type operation, and Redis is one of them (Oracle sequences are another, and Postgres supports ["update returning"](http://www.postgresql.org/docs/8.2/static/sql-update.html "Postgres docs")).
 
 When you think of the specific things that you need to ensure, many of these will reduce to numeric operations:
 
@@ -92,12 +95,12 @@ When you think of the specific things that you need to ensure, many of these wil
 
 All except the last one can be implemented with counters. The last one will need a carefully placed lock.
 
-The best way I’ve found to balance atomicity and concurrency is, for each value, actually create two counters:
+The best way I've found to balance atomicity and concurrency is, for each value, actually create two counters:
 
 * A counter you base logic on (eg, `slots_taken`)
 * A counter users see (eg, `current_students`)
 
-The reason you want two counters is you’ll need to change the value of the logic counter <strong>first</strong>, <em>before</em> checking it, to address any race conditions. This means the value can get wonky momentarily (eg, there could be 32 <tt>slots_taken</tt> for a 30-person course). This doesn’t affect its function - indeed, it’s part of what makes it work - but does mean you don’t want to display it.
+The reason you want two counters is you'll need to change the value of the logic counter *first*, *before* checking it, to address any race conditions. This means the value can get wonky momentarily (eg, there could be 32 `slots_taken` for a 30-person course). This doesn't affect its function - indeed, it's part of what makes it work - but does mean you don't want to display it.
 
 So, taking our `Course` example:
 
@@ -120,7 +123,7 @@ Then:
 
 Race-condition free. Why? Because we're checking the *direct result* of the increment operation against a value.  The set and get operations are one and the same, which is the crucial piece.  If that code block returns false, the counter is rewound, and no animals were harmed in this atomic op.
 
-Then, due to the `current_students` counter, your views get consistent information about the course, since it will only be incremented on success. There is still a race condition where `current_students` could be less than the real number of `CourseStudent` records, but since you’ll be displaying these values in a view (after that block completes) you shouldn’t see this manifest in real-world usage.
+Then, due to the `current_students` counter, your views get consistent information about the course, since it will only be incremented on success. There is still a race condition where `current_students` could be less than the real number of `CourseStudent` records, but since you'll be displaying these values in a view (after that block completes) you shouldn't see this manifest in real-world usage.
 
 Now you can sleep soundly, without fear of getting fired at 3am via an angry phone call from your boss. (At least, not about this…)
 

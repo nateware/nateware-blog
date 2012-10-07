@@ -46,3 +46,15 @@ div.navbar {
 p.author {
   display: inline;
 }
+
+#mailto {
+  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  padding: 0;
+}
+
+#mailto a {
+  background: url('/images/aws-icon.png') no-repeat;
+  padding: 2px 4px 2px 20px;
+  text-decoration: none;
+}
