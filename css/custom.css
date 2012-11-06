@@ -2,17 +2,20 @@
  * My craptastic CSS. Suck it.
  */
 
-img.rounded {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+.rounded {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
+/* This is needed if we add a navbar */
+/*
 @media all and (min-width:980px) {
   #main {
     padding-top: 50px;
   }
 }
+*/
 
 /* http://www.w3schools.com/css/css_list.asp */
 /*
@@ -22,14 +25,34 @@ ul.fancy {
 }
 */
 
+ul.posts {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul.posts li {
+  margin-bottom: 8px;
+}
+
+.postdate, .posttitle {
+  font-weight: bold;
+}
+
 ul.fancy {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
 
+ul.fancy li {
+  font-weight: bold;
+}
+
 ul.fancy ul {
   list-style-type: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 ul.fancy ul li {
@@ -37,6 +60,7 @@ ul.fancy ul li {
   background-repeat: no-repeat;
   background-position: 0px 1px; 
   padding-left: 22px; 
+  font-weight: normal;
 }
 
 div.navbar {
@@ -45,6 +69,14 @@ div.navbar {
 
 p.author {
   display: inline;
+}
+
+.page-header {
+  margin-bottom: 8px;
+}
+
+#titlelink {
+  color: black;
 }
 
 #mailto {
@@ -58,3 +90,21 @@ p.author {
   padding: 2px 4px 2px 20px;
   text-decoration: none;
 }
+
+#bio {
+  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+#google-share, #twitter-share, #facebook-share, #linkedin-share {
+  float: right;
+}
+
+#facebook-share {
+}
+
+.clearboth {
+  clear: both;
+}
+
+
