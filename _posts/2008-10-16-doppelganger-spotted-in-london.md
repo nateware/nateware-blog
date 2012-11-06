@@ -1,13 +1,9 @@
 ---
 layout: post
 title: Doppelganger spotted in London!
+draft: false
 tags:
 - humor
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1659912'
 ---
 Many people go their whole lives without finding their 
 [doppleganger](http://www.answers.com/doppelganger "look it up!"), but not me.

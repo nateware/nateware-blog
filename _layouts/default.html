@@ -1,0 +1,15 @@
+{% include header.html %}
+
+      <div class="row-fluid">
+        <div class="span8">
+          <div class="index-content">
+          {{content}}
+          </div>
+        </div>
+        <div class="span4">
+          {% include search_sidebar.html %}
+          {% include bio_sidebar.html    %}
+       </div>
+      </div>
+
+{% include footer.html %}

@@ -1,13 +1,11 @@
 ---
 layout: post
 title: An Atomic Rant
+draft: false
 tags:
 - ruby
 - redis
 - programming
-status: publish
-type: post
-published: true
 summary: "You are probably not handling atomic operations properly in your app, and probably have some nasty lurking race conditions. The worst part is these will get worse as your user count increases, are difficult to reproduce, and usually happen in your most critical pieces of code. (And no, your unit tests can't catch them either.)"
 ---
 
