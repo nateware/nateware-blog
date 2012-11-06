@@ -9,7 +9,7 @@ tags:
 summary: "You saw it here first: &quot;as it's currently architected&quot;. It's like the oldie but goodie &quot;in bed&quot; - you can add it to any application requirements and it makes everything so much better."
 ---
 
-Admit it, you've been on the giving or receiving end of requirements like these:
+How many times have you been on the giving or receiving end of requirements like these:
 
 * Our web tier needs 2.5 GB of memory for cache
 * Our app tier needs quad-core 2 GHz CPU's
@@ -46,18 +46,19 @@ a starting point for discussion.  Now you can look at options such as:
 (BTW, you should read up on [haproxy's design decisions](http://haproxy.1wt.eu/#desi), it's really
 a worthwhile read.)
 
-Running Backwards
------------------
+Awesome Post, Nate, Thanks
+--------------------------
+I know, not earth-shattering, but try it out next time.  And if somebody comes to you with
+"hard" requirements try it out on them:
 
-When was the last time you walked into a car dealership and asked for a car that:
+> Thanks for the requirements.  _As it's currently architected_, your app tier
+> needs quad-core GPU's, 20 GB of RAM, and 2 TB of disk.  Is it possible to
+> decrease the memory by using an external cache or search app?
 
-* Goes from 0-60 in 4 sec
-* Gets 50 MPG
-* Seats 8 comfortably
-* Costs $15k or less
+If you have a phrase you use, post it up - these types of situations are both frustrating
+and fun to share (and learn from).
 
-I'm guessing never.  (My son might do this, but he's 3 and doesn't yet comprehend the real world.)
 
-No, instead what you do is look at the cars that are out there, keeping your 
+
 
 
