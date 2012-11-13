@@ -8,4 +8,5 @@ javascripts:
 stylesheets:
   main:
     - _site/css/bootstrap.css
+    - _site/css/fc-webicons.css
     - _site/css/custom.css
