@@ -17,6 +17,32 @@
 }
 */
 
+#topbar {
+  background-color: #f0a600;
+  background-color: #40b3bd;
+  min-height: 57px;
+
+  /* bottom left and right */
+  -webkit-border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#blogname {
+  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#topbar .brand {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#searchresults {
+  min-height: 28px;
+}
+
 #mugshot {
   float: left;
   margin-right: 10px; /* for iphone view */
@@ -119,11 +145,12 @@ p.author {
 /* Lifted from zdnet */
 #follow-icons { /* ul */
   list-style: none;
+  margin-left: 10px;
 }
 
 .fc-webicon {
   float: left;
-  margin-right: 4px;
+  margin-right: 3px;
 }
 
 .iconSocial {
