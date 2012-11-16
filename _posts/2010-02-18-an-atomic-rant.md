@@ -6,9 +6,13 @@ tags:
 - ruby
 - redis
 - programming
-summary: "You are probably not handling atomic operations properly in your app, and probably have some nasty lurking race conditions. The worst part is these will get worse as your user count increases, are difficult to reproduce, and usually happen in your most critical pieces of code. (And no, your unit tests can't catch them either.)"
 ---
 
+You are probably not handling atomic operations properly in your app, and probably have some
+nasty lurking race conditions. The worst part is these will get worse as your user count
+increases, are difficult to reproduce, and usually happen in your most critical pieces of code.
+(And no, your unit tests can't catch them either.)
+<!--more-->
 Spoiler: If you're part of the ADHD generation and want to skip learning and go straight to the punchline, use Redis and <a href="http://github.com/nateware/redis-objects">redis-objects</a> for all your atomic data needs.
 
 Brush Up Your Resume

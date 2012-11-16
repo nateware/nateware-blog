@@ -13,10 +13,10 @@
         </h1>
         <div id="share">{% include social_buttons.html %}</div>
         <div class="clearboth"></div>
-        <p class="lead entry-summary">{{page.summary}}</p>
+        <p class="lead entry-summary">{{page.summary | markdownify | strip_p}}</p>
       </header>
       <div class="entry-content">
-        {{content}}
+        {{content | minus_summary}}
       </div>
     </article>
     <div id="tags">

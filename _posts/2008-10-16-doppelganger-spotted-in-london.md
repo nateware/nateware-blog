@@ -9,10 +9,10 @@ Many people go their whole lives without finding their
 [doppleganger](http://www.answers.com/doppelganger "look it up!"), but not me.
 By chance last weekend I picked up a New York Times and flipped to the Business
 section. There, staring back at me, was this!
-
+<!--more-->
 <p class="center">
   <a href="images/newspaper-doppleganger.jpg"><img
-    class="size-medium wp-image-7 aligncenter" title="My doppelganger... we ARE related!"
+    class="size-medium aligncenter" title="My doppelganger... we ARE related!"
       src="images/newspaper-doppleganger.jpg" alt="Nate's doppleganger"></a></p>
 
 I've been so absent-minded lately, that I thought it may actually _be_ me. Did I go to London

@@ -1,20 +1,16 @@
 ---
 layout: default
-title: Nate Wiger
+title: Blog Posts
+summary: Hi there doody
 ---
 
 <div id="home">
-  <h1>Posts</h1>
+  <h1 class="page-header">Braindump by Date</h1>
   <ul class="posts">
+    <!-- can't use "published" because jekyll hijacks -->
     {% for post in site.posts %}
-      <!-- can't use "published" because jekyll hijacks -->
       {% if post.draft != true %}
-      <li>
-      <span class="postdate">{{ post.date | date_to_string }}</span> &raquo;
-        <a href="{{ post.url }}" class="posttitle">{{ post.title }}</a>
-        <div class="summary">{{ post.summary }} <a href="{{ post.url }}">read more...</a></div>
-        
-      </li>
+        {% include post_list.html %}
       {% endif %}
     {% endfor %}
   </ul>

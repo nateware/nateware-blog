@@ -1,14 +1,16 @@
 ---
 layout: post
 title: I'm Coining a New Catchphrase
-draft: true
+published: false
 tags:
 - ruby
 - redis
 - programming
-summary: "You saw it here first: &quot;as it's currently architected&quot;. It's like the oldie but goodie &quot;in bed&quot; - you can add it to any application requirements and it makes everything so much better."
 ---
 
+You saw it here first: "as it's currently architected". It's like the oldie but goodie
+"in bed" - you can add it to any application requirements and it makes everything so much better.
+<!--more-->
 How many times have you been on the giving or receiving end of requirements like these:
 
 * Our web tier needs 2.5 GB of memory for cache

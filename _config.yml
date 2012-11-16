@@ -3,8 +3,9 @@ paginate: 5
 comments: true
 # "none" actually means /:categories/:title.html
 permalink: none
-title: Nate Wiger
+# author is used lots of places, MUST be JUST name
 author: Nate Wiger
-description: keywords
-tagline: cute shit here 
-
+url: http://nateware.com
+email: natewareblog@gmail.com
+title: Nate Wiger vs Software
+subtitle: Code always works better after a few beers

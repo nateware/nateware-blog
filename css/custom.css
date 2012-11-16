@@ -28,6 +28,10 @@
 #topbar {
   background-color: #f0a600;
   background-color: #40b3bd;
+  background-color: #0F7993;
+  border-bottom: 3px solid #FDB257;
+  color: #eee;
+
   min-height: 57px;
   padding-left: 20px;
   padding-right: 20px;
@@ -48,7 +52,8 @@
   display: block;
   margin-top: 10px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 26px;
+  color: black;
 }
 
 #searchbox {
@@ -76,16 +81,19 @@ ul.fancy {
 }
 */
 
-ul.posts {
+.posts {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
 
-ul.posts li {
+.posts li {
   margin-bottom: 8px;
 }
 
+.posts h3 {
+  margin-bottom: 0
+}
 .postdate, .posttitle {
   font-weight: bold;
 }
@@ -202,4 +210,7 @@ p.author {
   padding-top: 4px;
 }
 
+#related {
+  margin-bottom: 20px;
+}
 
