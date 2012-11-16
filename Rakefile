@@ -37,6 +37,7 @@ task :package do
 end
 
 desc "Deploy latest code in _site to production"
-task :deploy do
-  sh(%{ rsync -avz --delete _site/ #{PROD_DEST} })
+task :deploy => :package do
+  #sh(%{ rsync -avz --delete _site/ #{PROD_DEST} })
+  sh 'bundle exec jekyll-s3'
 end
