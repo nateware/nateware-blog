@@ -2,6 +2,28 @@
 # http://mikeferrier.com/2011/04/29/blogging-with-jekyll-haml-sass-and-jammit/
 #
 
+DEFAULT_FRONT_MATTER = <<EndMatter
+---
+layout: post
+title: %s
+draft: true
+tags:
+- ruby
+- rails
+- sinatra
+- redis
+- mysql
+- aws
+- ec2
+- s3
+- programming
+- databases
+- gaming
+- management
+- humor
+---
+EndMatter
+
 # rsync
 PROD_DEST = 'nateware.com:vhosts/nateware.com'
 
@@ -42,3 +64,25 @@ task :deploy => :package do
   sh "bundle exec jekyll-s3"
 end
 
+namespace :post do
+  task :new do
+    unless ENV['TITLE']
+      abort "Usage: rake post:new TITLE='Title of New Post'"
+    end
+
+    title = ENV['TITLE']
+    slug  = title.downcase.gsub(/\s+/, '-').gsub(/[^-a-z0-9]+/, '')
+    date  = Time.now.strftime('%Y-%m-%d')
+    file  = File.dirname(__FILE__) + "/_posts/#{date}-#{slug}.md"
+
+    if File.exists? file
+      abort "Error: Post already exists: #{file}"
+    end
+
+    File.open(file, 'w') do |f|
+      f << sprintf(DEFAULT_FRONT_MATTER, title)
+    end
+    puts "Wrote #{file}"
+    sh "gvim #{file}"
+  end
+end

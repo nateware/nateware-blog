@@ -75,9 +75,19 @@
 #bio {
   font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
-  color: #bbb;
+  color: #c0c0c0;
   background-color: #1D1D40;
   border: 2px solid #DBC309;
+}
+
+#powered-by {
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+  padding-top: 4px;
+  text-align: right;
+  font-size: 13px;
+  font-family: sans-serif;
+  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #follow-buttons {
