@@ -5,8 +5,6 @@ tags:
 - ruby
 - redis
 - failure
-status: publish
-type: post
 published: true
 ---
 My [atomic rant](an-atomic-rant.html) has gotten a ton of traffic
@@ -59,27 +57,44 @@ older than a certain time works pretty well for the rest of us.
 
 It's also a good idea to have a script you can run manually, in the event you know you need to reset
 certain things.  For example, to handle the case where you know your Redis node went down, you could
-have a script that deletes all locks where the ID is &lt; the current max ID in the DB.  Oracle and
+have a script that deletes all locks where the ID is > the current max ID in the DB.  Oracle and
 other systems have similar concepts built into their 
 [native locking procedures](http://download.oracle.com/docs/cd/B19306_01/appdev.102/b14258/d_lock.htm "How to release an Oracle lock")
 
-<h2>Troubleshooting Redis is a Pain</h2>
+Troubleshooting Redis is a Pain
+-------------------------------
 Unfortunately, Redis is lacking in the way of tools because it is still young.  There is the
 PHP <a title="Redis Admin" href="http://code.google.com/p/redis-admin/">Redis Admin</a> app, but
-its development appears to have stalled.  Beyond that it's pretty much roll-your-own-scripts at this point.  (We've thought about developing a general-purpose Redis app/tool ourselves, but with the Redis 2.0 changes and <a title="Antirez gets a job" href="http://antirez.com/post/vmware-the-new-redis-home.html">VMWare hiring Salvatore</a>, the tools side is a bit "wait and see".)
+its development appears to have stalled.  Beyond that it's pretty much roll-your-own-scripts at this point.
+We've thought about developing a general-purpose Redis app/tool ourselves, but with the Redis 2.0
+changes and [VMWare hiring Salvatore](http://antirez.com/post/vmware-the-new-redis-home.html "Antirez gets a job")
+the tools side is a bit "wait and see".
 
-So before you start throwing all of your critical data into Redis, realize it's a bit black-box at this point (or at least, a really dark gray).  I'm not a GUI guy personally - I prefer command-line tools due to my sysadmin days - but for many programmers, GUI tools help debugging <em>a lot</em>.  You need to make sure your programmers working with Redis can debug it when you have problems, which means a bigger investment in scripts vs. just downloading <a title="MySQL Workbench" href="http://wb.mysql.com/">MySQL Workbench</a> or <a title="Oracle SQL Developer" href="http://www.oracle.com/technology/products/database/sql_developer/index.html">Oracle SQL Developer</a>.
+So before you start throwing all of your critical data into Redis, realize it's a bit black-box
+at this point (or at least, a really dark gray).  I'm not a GUI guy personally - I prefer
+command-line tools due to my sysadmin days - but for many programmers, GUI tools help debugging
+<em>a lot</em>.  You need to make sure your programmers working with Redis can debug it when you
+have problems, which means a bigger investment in scripts vs. just downloading 
+[MySQL Workbench](http://wb.mysql.com/) or
+[Oracle SQL Developer](http://www.oracle.com/technology/products/database/sql_developer/index.html)
 
 Check and Double-Check
 ------------------------
-
-<a href="http://nateware.files.wordpress.com/2010/07/double-check.gif"><img class="alignright size-thumbnail wp-image-96" title="Double check" src="http://nateware.files.wordpress.com/2010/07/double-check.gif?w=150" alt="" width="150" height="86" /></a>The last thing worth mentioning is this: Don't trust your own app.  Even if you have an atomic gate at the start of a transaction, do sanity checking at the end too.  There are a few reasons for this:
+<img align="right" title="Double check" src="/image/double-check.gif" alt="Double check" width="150"
+height="86" />
+The last thing worth mentioning is this: Don't trust your own app.  Even if you have an atomic gate
+at the start of a transaction, do sanity checking at the end too.  There are a few reasons for this:
 
 * The lock may have expired for some reason, and you didn't test for this
 * Your locking server may have crashed when you're in the middle of a transaction
 * There could be a background job overlapping with a front-end transaction
 * Your software may have bugs (improbable, I know)
 
-For example, we had a background job that was using the same lock as a front-end service.  This ended up being a design mistake, but it was difficult to track down because it happened very infrequently.  The only way we found it was we had assertions that would get hit periodically on supposedly impossible conditions.  Once we correlated the times with the background job running, we were able to fix the issue rather quickly.
+For example, we had a background job that was using the same lock as a front-end service.  This ended
+up being a design mistake, but it was difficult to track down because it happened very infrequently.
+The only way we found it was we had assertions that would get hit periodically on supposedly
+impossible conditions.  Once we correlated the times with the background job running, we were able
+to fix the issue rather quickly.
 
-So my opinion is this: Try to do the right thing, but if it screws up, apologize to the user, recover, and move on.
+So my opinion is this: Try to do the right thing, but if it screws up, apologize to the user,
+recover, and move on.
