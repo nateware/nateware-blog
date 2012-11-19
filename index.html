@@ -9,7 +9,7 @@ summary: Hi there doody
   <ul class="posts">
     <!-- can't use "published" because jekyll hijacks -->
     {% for post in site.posts %}
-      {% if post.draft != true %}
+      {% if post.draft != true and post.listpost != false %}
         {% include post_list.html %}
       {% endif %}
     {% endfor %}

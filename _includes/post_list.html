@@ -1,6 +1,8 @@
 <li>
   <h3 class="entry-title">
-    <span class="postdate">{{ post.date | date_to_string }}</span> &raquo;
+    {% if post.showdate != false %}
+      <span class="postdate">{{ post.date | date_to_string }}</span> &raquo;
+    {% endif %}
     <a href="{{ post.url }}" class="posttitle">{{ post.title }}</a>
   </h3>
   <div class="summary">{{ post.summary }} <a href="{{ post.url }}">read more...</a></div>
