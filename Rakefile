@@ -16,12 +16,17 @@ tags:
 - aws
 - ec2
 - s3
+- twitter
+- webdesign
 - programming
 - databases
 - gaming
 - management
+- blogging
 - humor
 ---
+
+<!--more-->
 EndMatter
 
 # rsync
@@ -65,6 +70,7 @@ task :deploy => :package do
 end
 
 namespace :post do
+  desc "Create a new post and start editing it"
   task :new do
     unless ENV['TITLE']
       abort "Usage: rake post:new TITLE='Title of New Post'"
