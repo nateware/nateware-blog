@@ -41,7 +41,7 @@ class ImageTag < Liquid::Tag
   def render(context)
     %Q(<div class="figure #{@opts['class']}"><img src="#{PATH}/#{@image}") +
     %Q( alt="#{@caption}" title="#{@caption}" #{opts_to_html} />)+
-    %Q(<p>#{@caption}</p></div>)
+    %Q(<p class="caption">#{@caption}</p></div>)
   end
 end
 
