@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Jekyll Plus Twitter Bootstrap on S3
-draft: true
 tags:
 - ruby
 - jekyll
@@ -42,12 +41,12 @@ Punchline
 
 Here's a comparison of my finished blog layout on a laptop:
 
-{% image_tag layout-laptop-full.png, 'Laptop layout - full page', :width => '500px' %}
+{% image_tag layout-laptop-full.png, 'Laptop layout - full page', :width => '90%' %}
 
 And on a mobile device:
 
-{% image_tag layout-mobile-top.png, 'Mobile layout - top', :width => '200px', :class => 'pull-left' %}
-{% image_tag layout-mobile-bottom.png, 'Mobile layout - bottom', :width => '200px', :class => 'pull-left clearfix' %}
+{% image_tag layout-mobile-top.png, 'Mobile layout - top', :width => '45%', :class => 'pull-left' %}
+{% image_tag layout-mobile-bottom.png, 'Mobile layout - bottom', :width => '45%', :class => 'pull-left clearfix' %}
 
 On smaller screens, notice how the search bar remains up-top, under the title.
 My bio, on the other hand, shifts all the way to the bottom, after the article.
