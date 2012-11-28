@@ -9,7 +9,7 @@ $(function(){
   };
   var new_url = url_map[req_url];
   if (new_url) {
-    location.href = new_url;
+    window.location.href = '/' + new_url;
   } else {
     $('#bad_url').html(req_url);
   }
