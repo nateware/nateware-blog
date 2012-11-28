@@ -1,10 +1,17 @@
 ---
 layout: default
-title: Blog Posts
+title: Error Posts
 ---
 
+<script type="text/javascript">
+  {% include redirects.js %}
+</script>
 <div id="home">
-  <h1 class="page-header">Braindump by Date</h1>
+  <h1 class="page-header">404 :(</h1>
+  <p>
+    Sorry, the requested URL <span id="bad_url"></span> was not found.
+    How about one of these instead?
+  </p>
   <ul class="posts">
     <!-- can't use "published" because jekyll hijacks -->
     {% for post in site.posts %}

@@ -103,6 +103,10 @@
   font-size: 12px;
 }
 
+#bad_url {
+  font-weight: bold;
+}
+
 /*
 .figure img {
   border: 1px solid #e3e3e3;
