@@ -7,6 +7,7 @@ tags:
 - s3
 - twitter
 - webdesign
+draft: true
 ---
 
 I've decided that modern web development is largely a test of your

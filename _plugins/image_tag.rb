@@ -26,8 +26,8 @@ class ImageTag < Liquid::Tag
 
     @args = splat.split(/\s*,\s*/).map{|x| strip_quotes(x) }
     @image = @args.shift
+    @title = @args.shift
     @caption = @args.shift
-    @tooltip = @args.shift || @caption
   end
 
   def strip_quotes(x)
@@ -39,9 +39,10 @@ class ImageTag < Liquid::Tag
   end
 
   def render(context)
-    %Q(<div class="figure #{@opts['class']}"><img src="#{PATH}/#{@image}") +
-    %Q( alt="#{@caption}" title="#{@caption}" #{opts_to_html} />)+
-    %Q(<p class="caption">#{@caption}</p></div>)
+    out =  %Q(<div class="figure #{@opts['class']}"><img src="#{PATH}/#{@image}")
+    out += %Q( alt="#{@title}" title="#{@title}" #{opts_to_html} />)
+    out += %Q(<p class="caption">#{@caption}</p>) if @caption
+    out += '</div>'
   end
 end
 
