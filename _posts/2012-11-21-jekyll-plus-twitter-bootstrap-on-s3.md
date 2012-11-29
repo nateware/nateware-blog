@@ -37,7 +37,7 @@ the following packages to make this all happen:
 
 Some of these worked great. Others made me want to club a baby seal.
 
-Punchline
+Laid Out
 ---------
 
 Here's a comparison of my finished blog layout on a laptop:
@@ -75,11 +75,8 @@ Here's my core page structure:
     <div class="row-fluid">
       <div class="span9">
         <div class="index-content">
-          <!-- Article or post list -->
+          <!-- Article or list of posts -->
           {{content}}
-        </div>
-        <div id="powered-by">
-          Powered by Jekyll + Twitter Bootstrap deployed to S3.
         </div>
       </div>
       <div class="span3">
@@ -89,11 +86,15 @@ Here's my core page structure:
 
 http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design
 
+DNS
+---
 
+    $ dig +short allthingsdistributed.com
+    174.129.25.170
+    $ dig +short www.allthingsdistributed.com
+    s3-website-us-east-1.amazonaws.com.
 
 Twitter Bootstrap was the real enabling tech here
-
-
 
 
 

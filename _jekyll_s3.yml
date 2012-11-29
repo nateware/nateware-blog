@@ -1,4 +1,4 @@
 s3_id: <%= ENV['AWS_ACCESS_KEY_ID'] || raise("Missing AWS_ACCESS_KEY_ID") %>
 s3_secret: <%= ENV['AWS_SECRET_ACCESS_KEY'] || raise("Missing AWS_SECRET_ACCESS_KEY") %>
-s3_bucket: nateware-blog
+s3_bucket: www.nateware.com
 #cloudfront_distribution_id: E3FOONG1969HYC
