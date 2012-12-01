@@ -26,7 +26,7 @@
     <div id="tags">
       <b>Tags:</b>
         {% for tag in page.tags %}
-          <a class="tag_list_link" href="/tag/{{ tag }}.html">{{ tag }}</a>
+          <a class="tag_list_link" href="/tag/{{ tag | replace:' ','-'}}.html">{{ tag }}</a>
         {% endfor %}
     </div>
     <div id="related">

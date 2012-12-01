@@ -7,7 +7,7 @@ module Jekyll
       @site = site
       @base = base
       @dir  = dir
-      @name = "#{tag}.html"
+      @name = "#{tag.gsub(' ', '-')}.html"
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
       self.data['tag'] = tag
