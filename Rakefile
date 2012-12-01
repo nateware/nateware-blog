@@ -50,7 +50,7 @@ end
 desc "Build site"
 task :build do |task, args|
   # Rake::Task["parse_haml"].invoke
-  sh "bundle exec jekyll"
+  sh "bundle exec jekyll --lsi"
 end
 
 desc "Package app for production"
