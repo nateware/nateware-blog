@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Replacing Macbook Pro HD with an SSD
-draft: true
+title: Replacing Macbook HD with an SSD
 tags:
 - mac
 - osx
 - hardware
 ---
 
-Web browsing is very disk-intensive because of all the caching involved.  So I upgraded
-my laptop's hard drive to an SSD, which turned out to be inexpensive and very DIY friendly.
+Browsers are very disk-intensive because of all the caching involved, and pretty much
+everything is a browser app nowadays.  So I upgraded my laptop's hard drive to an SSD,
+which turned out to be inexpensive and very DIY friendly.
 Here are my cliffs notes.
 <!--more-->
 ### Step 1: Choose an SSD
