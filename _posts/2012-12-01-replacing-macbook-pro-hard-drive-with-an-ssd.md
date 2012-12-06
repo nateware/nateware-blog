@@ -7,10 +7,8 @@ tags:
 - hardware
 ---
 
-Browsers are very disk-intensive because of all the caching involved, and pretty much
-everything is a browser app nowadays.  So I upgraded my laptop's hard drive to an SSD,
-which turned out to be inexpensive and very DIY friendly.
-Here are my cliffs notes.
+My poor little laptop hard drive had been whining and whimpering, so I upgraded my it
+to an SSD.  Turned out to be inexpensive and very DIY friendly, so here are my cliffs notes.
 <!--more-->
 ### Step 1: Choose an SSD
 {% image_tag mercury-extreme.jpg, 'Mucho fasto SSD', :class => 'pull-right', :width => '100' %}
@@ -43,11 +41,13 @@ with upgrade-related tasks.  Warning: With 22oz at 9.75%, the clock is now ticki
 {% image_tag disk-utility.png, 'Disk Utility Window', :class => 'pull-right', :width => '300' %}
 Once you attach the drive, a window will popup saying something like "Unrecognized drive format".
 Click the "Initialize" button to open up Disk Utility.  You should see a screen like
-the one at right.  Click the "Partition" button in the right pane, and add two partitions:
+the one at right.  Click the "Partition" button in the right pane, and do the following:
 
-1. A partition named "Recovery HD" at least 750 MB in size.  This is required for OSX Lion,
-   Mountain Lion, or later.  Skip otherwise.
-2. A partition with all the remaining space, named whatever you want.  I called mine "SSD Boot HD".
+1. Create a partition with all the available space, named whatever you want.  I called
+   mine "SSD Boot HD".
+2. Click "+" to add a partition named "Recovery HD" of at least 750 MB in size.
+   This is required for OSX Lion, Mountain Lion, or later, or if you're using FileVault
+   (disk encryption).
 
 Both should be the default type of "Mac OSX Extended (Journaled)".
 
@@ -65,6 +65,10 @@ to a new external drive.
 
 All you do is select your existing drive on the left, probably "Macintosh HD", and your
 new drive on the right (whatever you called it in Step 5), and click "Clone".
+
+You'll probably get a popup saying that "Recovery HD" does not contain the correct OS.
+If so, follow the on-screen instructions to correct it.  I found CCC didn't properly
+reset itself, so I had to exit, re-launch, and then click "Clone" again to complete.
 
 ### Step 8: Wait
 
