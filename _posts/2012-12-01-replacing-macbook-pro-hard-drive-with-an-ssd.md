@@ -50,7 +50,9 @@ the one at right.  Click the "Partition" button in the right pane, and do the fo
    This is required for OSX Lion, Mountain Lion, or later, or if you're using FileVault
    (disk encryption).
 
-Both should be the default type of "Mac OSX Extended (Journaled)".
+Both should be the default type of "Mac OSX Extended (Journaled)".  It's important that the 
+"Recovery HD" partition be second, because of restrictions on how Lion/Mountain Lion can
+and can't resize boot partitions.
 
 ### Step 6: Clone the Drive
 
@@ -67,9 +69,10 @@ to a new external drive.
 All you do is select your existing drive on the left, probably "Macintosh HD", and your
 new drive on the right (whatever you called it in Step 5), and click "Clone".
 
-You'll probably get a popup saying that "Recovery HD" does not contain the correct OS.
-If so, follow the on-screen instructions to correct it.  I found CCC didn't properly
-reset itself, so I had to exit, re-launch, and then click "Clone" again to complete.
+You may get a popup saying something like, "Recovery HD partition does not contain the correct OS."
+If so, follow the on-screen instructions to update it.  I found CCC didn't properly
+reset itself after this, so I had to exit, re-launch, and then click "Clone" again to
+start the clone.
 
 ### Step 8: Wait
 
