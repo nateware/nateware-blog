@@ -74,17 +74,17 @@ If so, follow the on-screen instructions to update it.  I found CCC didn't prope
 reset itself after this, so I had to exit, re-launch, and then click "Clone" again to
 start the clone.
 
-### Step 8: Wait
+### Step 7: Wait
 
 Sip on your beer from Step 4.
 
-### Step 9: Shutdown Mac, Swap Drives
+### Step 8: Shutdown Mac, Swap Drives
 
 Once the clone is finished, shutdown and unplug the power cable.  Pull the external drive
 out of the case, reversing Step 3. Then, follow [these excellent instructions](http://macinstruct.com/node/407)
 to physically install the SSD in your Macbook.  Requires a teeny tiny midget screwdriver.
 
-### Step 10: Boot Mac, Enjoy
+### Step 9: Boot Mac, Enjoy
 
 Everything should Just Work&trade;, although I did notice that some programs like Dropbox
 required me to reenter my email/password the first time.  For fun, try clicking on a beastly
