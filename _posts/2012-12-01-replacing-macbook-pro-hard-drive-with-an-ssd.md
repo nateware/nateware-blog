@@ -7,8 +7,9 @@ tags:
 - hardware
 ---
 
-My poor little laptop hard drive had been whining and whimpering, so I upgraded my it
-to an SSD.  Turned out to be inexpensive and very DIY friendly, so here are my cliffs notes.
+My poor little laptop hard drive had been whining and whimpering, so I upgraded it
+to an SSD.  Turned out to be inexpensive and very DIY friendly, so here are my cliffs
+notes.
 <!--more-->
 ### Step 1: Choose an SSD
 {% image_tag mercury-extreme.jpg, 'Mucho fasto SSD', :class => 'pull-right', :width => '100' %}
