@@ -1,5 +1,5 @@
 /* map of sites */
-$(function(){
+(function(){
   var req_url = window.location.pathname.substr(1).replace(/\/$/, "");
   var url_map = {
     "2011/02/10/controlling-what-you-can" : "controlling-what-you-can.html",
@@ -13,4 +13,4 @@ $(function(){
   } else {
     $('#bad_url').html(req_url);
   }
-});
+})();
