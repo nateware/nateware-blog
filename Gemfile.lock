@@ -19,6 +19,8 @@ GEM
     erubis (2.7.0)
     fast-stemmer (1.0.2)
     filey-diff (1.4.0)
+    gsl (1.15.3)
+      narray (>= 0.5.9)
     haml (4.0.3)
       tilt
     highline (1.6.19)
@@ -52,6 +54,7 @@ GEM
       syntax (>= 1.0.0)
     mime-types (1.19)
     mini_portile (0.5.1)
+    narray (0.6.0.8)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     posix-spawn (0.3.6)
@@ -72,6 +75,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  gsl
   haml
   hpricot
   jammit

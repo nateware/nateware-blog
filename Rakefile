@@ -44,13 +44,13 @@ end
 desc "Launch preview environment"
 task :preview do
   Rake::Task["parse_haml"].invoke
-  sh "bundle exec jekyll --auto --server"
+  sh "bundle exec jekyll serve --auto"
 end
 
 desc "Build site"
 task :build do |task, args|
   # Rake::Task["parse_haml"].invoke
-  sh "bundle exec jekyll --lsi"
+  sh "bundle exec jekyll build --lsi"
 end
 
 desc "Package app for production"
