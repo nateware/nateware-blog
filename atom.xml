@@ -15,6 +15,7 @@ layout: nil
   </author>
 
   {% for post in site.posts %}
+    {% if post.draft != true and post.listpost != false %}
   <entry>
     <id>{{ site.url }}{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="{{ site.url }}{{ post.url }}" />
@@ -27,5 +28,6 @@ layout: nil
     </author>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
+    {% endif %}
   {% endfor %}
 </feed>
