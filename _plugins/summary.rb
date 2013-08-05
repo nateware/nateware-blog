@@ -7,14 +7,14 @@
 module Jekyll
   class Post
     alias_method :original_to_liquid, :to_liquid
-    def to_liquid
+    def to_liquid(attrs = ATTRIBUTES_FOR_LIQUID)
       summary, body = content.split(%r(<!--\s*more\s*-->), 2)
 
       # remove any paragraph tags from summary
       summary.gsub!(%r(</*p>),'')
 
       #puts "===debug===\ncontent: #{content}\nsummary: #{summary}\n"
-      original_to_liquid.deep_merge({
+      original_to_liquid(attrs).deep_merge({
         'summary' => summary,
         'body'    => body
       })
