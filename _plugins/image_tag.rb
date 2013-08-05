@@ -39,10 +39,11 @@ class ImageTag < Liquid::Tag
   end
 
   def render(context)
-    out =  %Q(<div class="figure #{@opts['class']}"><img src="#{PATH}/#{@image}")
-    out += %Q( alt="#{@title}" title="#{@title}" #{opts_to_html} />)
+    # Nate: For some reason, adding <a> for the image trips up Maruku. Weird.
+    out =  %Q(<div class="figure #{@opts['class']}">)
+    out += %Q(<img src="#{PATH}/#{@image}" alt="#{@title}" title="#{@title}" #{opts_to_html}>)
     out += %Q(<p class="caption">#{@caption}</p>) if @caption
-    out += '</div>'
+    out += %Q(</div>)
   end
 end
 
