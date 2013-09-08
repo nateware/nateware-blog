@@ -44,7 +44,7 @@ end
 desc "Launch preview environment"
 task :preview do
   Rake::Task["parse_haml"].invoke
-  sh "bundle exec jekyll serve --auto"
+  sh "bundle exec jekyll serve --watch"
 end
 
 desc "Build site"
