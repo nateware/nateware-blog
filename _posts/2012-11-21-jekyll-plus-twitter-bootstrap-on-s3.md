@@ -80,7 +80,7 @@ Here's my core page structure:
         </div>
       </div>
       <div class="span3">
-        {% include sidebar.html %}
+        {\% include sidebar.html \%}
       </div>
     </div>
 
