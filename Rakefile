@@ -8,6 +8,13 @@ layout: post
 title: %s
 draft: true
 tags:
+- webdesign
+- programming
+- databases
+- gaming
+- management
+- blogging
+- humor
 - ruby
 - rails
 - sinatra
@@ -16,21 +23,16 @@ tags:
 - aws
 - ec2
 - s3
-- twitter
-- webdesign
-- programming
-- databases
-- gaming
-- management
-- blogging
-- humor
+- redshift
+- kinesis
+- dynamodb
+- beanstalk
 ---
 
 <!--more-->
 EndMatter
 
-# rsync
-PROD_DEST = 'nateware.com:vhosts/nateware.com'
+EDITOR = 'subl' # gvim
 
 desc "Parse haml layouts"
 task :parse_haml do
@@ -65,7 +67,6 @@ end
 
 desc "Deploy latest code in _site to production"
 task :deploy => :package do
-  #sh(%{ rsync -avz --delete _site/ #{PROD_DEST} })
   sh "bundle exec jekyll-s3"
 end
 
@@ -89,6 +90,6 @@ namespace :post do
       f << sprintf(DEFAULT_FRONT_MATTER, title)
     end
     puts "Wrote #{file}"
-    sh "gvim #{file}"
+    sh "#{EDITOR} #{file}"
   end
 end
