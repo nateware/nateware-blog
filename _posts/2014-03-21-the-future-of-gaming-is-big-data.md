@@ -17,7 +17,6 @@ Kinesis, and Elastic MapReduce.  But at the end I blabbed a bit about the future
 gaming: Big data and real-time analytics.
 <!--more-->
 Here are the slides:
-<iframe src="http://www.slideshare.net/slideshow/embed_code/32592688" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/nateware/gdc2014-aws-gameanalytics" title="AWS Game Analytics - GDC2014" target="_blank">AWS Game Analytics - GDC2014</a> </strong> from <strong><a href="http://www.slideshare.net/nateware" target="_blank">Nate Wiger</a></strong> </div>
 Free-to-play has taken hold as one of the main publishing strategies for games,
 especially mobile and social games. It's widely known that succeeding in this
 space requires having good analytics on your players, so you know what they love

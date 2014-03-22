@@ -5,5 +5,5 @@
     {% endif %}
     <a href="{{ post.url }}" class="posttitle">{{ post.title }}</a>
   </h3>
-  <div class="summary">{{ post.summary }} <a href="{{ post.url }}">read more...</a></div>
+  <div class="summary">{{ post.excerpt | markdownify }} <a href="{{ post.url }}">read more...</a></div>
 </li>

@@ -1,4 +1,4 @@
-markdown: redcarpet
+#markdown: redcarpet
 pygments: true
 paginate: 5
 comments: true
