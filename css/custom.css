@@ -237,13 +237,16 @@ p.author {
 
 
 /* Google search overrides */
+#searchbox {
+  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 #searchbox table.gsc-search-box td {
   vertical-align: top
 }
 #searchbox input.gsc-search-button {
   height: 30px;
-  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: normal;
 }
 
 #searchbox td.gsc-clear-button {
