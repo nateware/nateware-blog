@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Game Analytics with AWS
+title: Game Analytics with AWS at GDC 2014
 tags:
 - aws
 - gaming
@@ -11,7 +11,7 @@ tags:
 - mapreduce
 ---
 
-I gave a talk at GDC 2014 all about game analytics and AWS In the talk, I showed how to start
+I gave a talk at GDC 2014 all about game analytics and AWS. In the talk, I showed how to start
 small by uploading analytics files from users devices to S3, and then processing them with
 Redshift.  As your game grows, add more data sources and AWS services such as Kinesis
 and Elastic MapReduce to perform more complex processing.
