@@ -32,7 +32,6 @@ you can react, the more your game is going to differentiate itself.  Recently th
 a massive battle in [EVE Online](http://www.eveonline.com/) that
 [destroyed nearly $500,000 worth of ships and equipment](http://bigstory.ap.org/article/unpaid-bill-leads-game-battle-worth-200000).
 Imagine being able to react in real-time, in the heat of battle, offering players discounted
-ammunition and charges targeted based on their fleet and place in battle.  Some
+ammunition targeted at their fleet and status in battle.  Some
 [estimate impulse buys to account for 40% of all ecommerce](http://blog.eyesurf.info/?p=2727)
-meaning there is huge untapped potential for mobile gaming.
-
+meaning there is huge untapped potential for gaming in the analytics space.
