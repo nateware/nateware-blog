@@ -1,7 +1,6 @@
 ---
 layout: post
-title: The Future of Gaming is Big Data
-draft: true
+title: Game Analytics with AWS
 tags:
 - aws
 - gaming
@@ -11,27 +10,29 @@ tags:
 - bigdata
 - mapreduce
 ---
-I gave a talk at GDC 2014 on about game analytics and AWS.  Much of the talk was
-focused on building an analytics pipeline using AWS services like Redshift,
-Kinesis, and Elastic MapReduce.  But at the end I blabbed a bit about the future of
-gaming: Big data and real-time analytics.
-<!--more-->
-Here are <a href="http://www.slideshare.net/slideshow/embed_code/32592688">the slides</a>:
 
+I gave a talk at GDC 2014 all about game analytics and AWS In the talk, I showed how to start
+small by uploading analytics files from users devices to S3, and then processing them with
+Redshift.  As your game grows, add more data sources and AWS services such as Kinesis
+and Elastic MapReduce to perform more complex processing.
+Here are <a href="http://www.slideshare.net/slideshow/embed_code/32592688">the slides</a> on Slideshare.
+<!--more-->
 <iframe src="http://www.slideshare.net/slideshow/embed_code/32592688" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen="allowfullscreen">Game Analytics with AWS</iframe>
 
-Free-to-play has taken hold as one of the main publishing strategies for games,
-especially mobile and social games. It's widely known that succeeding in this
-space requires having good analytics on your players, so you know what they love
-and what they hate.  Having an awesome game has always been about maximizing the
-love and minimizing the hate. Charge a reasonable price for the things your players
-love and you have a simple but effective monetization strategy.
+Free-to-play has become a ubiquitous strategy for publishing
+games, especially mobile and social games.  Succeeding in free-to-play requires having razor-sharp
+analytics on your players, so you know what they love and what they hate.
+Free-to-play aside, having an awesome game has always been about maximizing the love and
+minimizing the hate. Charge a reasonable price for the things your players love and you
+have a simple but effective monetization strategy.
 
-So how do you know what they love?
-----------------------------------
-The only reliable way to tell what players love is by analyzing their actual 
-behavior.  You can't get there by asking them.  [There's some wonderful psychological
-research]() that shows people change their answers when you ask them questions, to
-provide more socially acceptable answers.
-
+At the end of the talk, I blabbed a bit about what I see as the future of gaming: Big data
+and real-time analytics.   The more in-tune you can get with your players, and the faster
+you can react, the more your game is going to differentiate itself.  Recently there was
+a massive battle in [EVE Online](http://www.eveonline.com/) that
+[destroyed nearly $500,000 worth of ships and equipment](http://bigstory.ap.org/article/unpaid-bill-leads-game-battle-worth-200000).
+Imagine being able to react in real-time, in the heat of battle, offering players discounted
+ammunition and charges targeted based on their fleet and place in battle.  Some
+[estimate impulse buys to account for 40% of all ecommerce](http://blog.eyesurf.info/?p=2727)
+meaning there is huge untapped potential for mobile gaming.
 
