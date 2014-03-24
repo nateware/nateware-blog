@@ -12,3 +12,5 @@ title: Nate Wiger vs Technology
 subtitle: Code always works better after a few beers
 # http://stackoverflow.com/questions/16422933/how-do-i-use-markdownify-in-jekyll-to-show-an-excerpt-on-the-index
 excerpt_separator: <!--more-->
+# see footer.html
+google_analytics: UA-23188280-1

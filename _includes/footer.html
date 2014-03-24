@@ -14,9 +14,11 @@
 
     <!-- Google Analytics -->
     <script>
-        var _gaq=[['_setAccount','UA-23188280-1'],['_trackPageview']];
+        var _gaq=[['_setAccount','{{ site.google_analytics }}'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        // g.src = ('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        // https://support.google.com/analytics/answer/2444872?hl=en&utm_id=ad
+        g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
   </body>
