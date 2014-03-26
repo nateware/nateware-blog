@@ -162,8 +162,8 @@ ul.fancy ul {
 ul.fancy ul li {
   background-image: url('/images/list-style1.png');
   background-repeat: no-repeat;
-  background-position: 0px 1px; 
-  padding-left: 22px; 
+  background-position: 0px 1px;
+  padding-left: 22px;
   font-weight: normal;
 }
 
@@ -177,6 +177,10 @@ p.author {
 
 .page-header {
   margin-bottom: 8px;
+}
+
+.page-header .entry-pubdate {
+  font-size: smaller;
 }
 
 #titlelink {
