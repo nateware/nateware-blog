@@ -6,7 +6,7 @@ tags:
 - aws
 - gaming
 - analytics
-- redshit
+- redshift
 - kinesis
 - bigdata
 - mapreduce
