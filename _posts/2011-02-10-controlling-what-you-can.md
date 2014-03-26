@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Controlling What You Can
+disqus_identifier: 43a0cd95-4df8-4ac4-b100-77a6911c3dbb
 tags:
 - gaming
 - management

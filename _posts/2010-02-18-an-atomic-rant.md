@@ -1,6 +1,7 @@
 ---
 layout: post
 title: An Atomic Rant
+disqus_identifier: cc866ba3-e8fa-4b9c-9370-2f196b56e9e0
 draft: false
 tags:
 - ruby

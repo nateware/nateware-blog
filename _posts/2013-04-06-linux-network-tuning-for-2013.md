@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Linux Network Tuning for 2013
+disqus_identifier: 1ef6dd76-c278-403f-9d03-f8f2dacde6f1
 tags:
 - linux
 - networking
@@ -54,7 +55,7 @@ Kernel Parameters
 To start, edit `/etc/sysctl.conf` and add these lines:
 
     # /etc/sysctl.conf
-    # Increase system file descriptor limit    
+    # Increase system file descriptor limit
     fs.file-max = 100000
 
     # Discourage Linux from swapping idle processes to disk (default = 60)
@@ -85,7 +86,7 @@ To start, edit `/etc/sysctl.conf` and add these lines:
 
     # Disable TCP slow start on idle connections
     net.ipv4.tcp_slow_start_after_idle = 0
-     
+
     # If your servers talk UDP, also up these limits
     net.ipv4.udp_rmem_min = 8192
     net.ipv4.udp_wmem_min = 8192
@@ -96,7 +97,7 @@ To start, edit `/etc/sysctl.conf` and add these lines:
     net.ipv4.conf.all.accept_source_route = 0
 
     # Log packets with impossible addresses for security
-    net.ipv4.conf.all.log_martians = 1 
+    net.ipv4.conf.all.log_martians = 1
 
 Since some of these settings can be cached by networking services, it’s best
 to reboot to apply them properly (`sysctl -p` does not work reliably).
@@ -117,7 +118,7 @@ So, first edit `/etc/security/limits.conf` to increase our session limits:
     * hard nofile 100000
 
 Next, `/etc/ssh/sshd_config` needs to make sure to use PAM:
-      
+
     # /etc/ssh/sshd_config
     # ensure we consult pam
     UsePAM yes

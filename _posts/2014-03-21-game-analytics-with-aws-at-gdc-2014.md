@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Game Analytics with AWS at GDC 2014
+disqus_identifier: 950dd60a-d32b-4383-8f71-6e5e413766e9
 tags:
 - aws
 - gaming

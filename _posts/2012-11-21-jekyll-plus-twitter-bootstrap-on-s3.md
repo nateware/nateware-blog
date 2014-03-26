@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Jekyll Plus Twitter Bootstrap on S3
+disqus_identifier: aaaa99a7-a76a-4668-9614-26d5465168d9
 tags:
 - ruby
 - jekyll
@@ -70,7 +71,7 @@ Here's my core page structure:
     </div>
     <div id="searchresults">
       <!-- Google custom search result -->
-      <gcse:searchresults></gcse:searchresults> 
+      <gcse:searchresults></gcse:searchresults>
     </div>
     <div class="row-fluid">
       <div class="span9">

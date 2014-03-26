@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Doppelganger spotted in London!
+disqus_identifier: af0e9f16-eb99-4749-9426-06ffa97a579b
 draft: false
 tags:
 - humor
 ---
-Many people go their whole lives without finding their 
+Many people go their whole lives without finding their
 [doppleganger](http://www.answers.com/doppelganger "look it up!"), but not me.
 By chance last weekend I picked up a New York Times and flipped to the Business
 section. There, staring back at me, was this!
@@ -23,6 +24,6 @@ realize it was _that_ big a part.
 Then I had this fantasy that I was, come nightfall, some type of socialist secret agent,
 something straight out of the Cold War, leading an underground movement to topple world
 governments. Then I realized: that would be an awesome idea for a TV show. I could get somebody
-handsome, maybe a bit dark - like 
-[Christian Slater](http://crime.about.com/od/famousdiduno/ig/celebrity_mugshots/slaterchristian.htm "ok maybe not THAT dark") - to play me. As usual, somebody 
+handsome, maybe a bit dark - like
+[Christian Slater](http://crime.about.com/od/famousdiduno/ig/celebrity_mugshots/slaterchristian.htm "ok maybe not THAT dark") - to play me. As usual, somebody
 [stole my idea](http://www.nbc.com/My_Own_Worst_Enemy/ "Sponsored by Chevy?")

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Real-time Leaderboards with ElastiCache and Redis Objects
+disqus_identifier: 0f7795f4-19bd-4ceb-86c1-8b03f281de19
 tags:
 - ruby
 - redis
@@ -49,7 +50,7 @@ lb["Barry"] = 819
 lb["Carl"]  = 105
 lb["Derek"] = 1312
 
-puts lb.revrange(0, -1)  # ["Derek", "Barry", "Andy", "Carl"] 
+puts lb.revrange(0, -1)  # ["Derek", "Barry", "Andy", "Carl"]
 {% endhighlight %}
 
 And... we're done.  Ship it.
