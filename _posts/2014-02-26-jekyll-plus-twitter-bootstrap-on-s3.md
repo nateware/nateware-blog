@@ -8,6 +8,7 @@ tags:
 - s3
 - twitter
 - webdesign
+- bootstrap
 draft: true
 ---
 
@@ -40,7 +41,6 @@ Some of these worked great. Others made me want to club a baby seal.
 
 Laid Out
 ---------
-
 Here's a comparison of my finished blog layout on a laptop:
 
 {% image_tag layout-laptop-full.png, 'Laptop layout - full page', :width => '90%' %}
