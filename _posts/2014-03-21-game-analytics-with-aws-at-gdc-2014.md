@@ -16,7 +16,8 @@ I gave a talk at GDC 2014 all about game analytics and AWS. In the talk, I showe
 small by uploading analytics files from users devices to S3, and then processing them with
 Redshift.  As your game grows, add more data sources and AWS services such as Kinesis
 and Elastic MapReduce to perform more complex processing.
-Here are <a href="http://www.slideshare.net/slideshow/embed_code/32592688">the slides</a> on Slideshare.
+Here are <a href="http://www.slideshare.net/slideshow/embed_code/32592688">the slides on Slideshare</a>
+and <a href="http://aws.amazon.com/game-hosting/GDC2014-videos/">the videos on YouTube</a>.
 <!--more-->
 <iframe src="http://www.slideshare.net/slideshow/embed_code/32592688" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen="allowfullscreen">Game Analytics with AWS</iframe>
 
