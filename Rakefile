@@ -70,7 +70,7 @@ end
 
 desc "Deploy latest code in _site to production"
 task :deploy => :package do
-  sh "bundle exec jekyll-s3"
+  sh "bundle exec s3_website push"
 end
 
 desc "Create a new post and start editing it"
