@@ -1,5 +1,5 @@
 #markdown: redcarpet
-pygments: true
+highlighter: pygments
 paginate: 5
 comments: true
 # "none" actually means /:categories/:title.html
@@ -10,8 +10,9 @@ author: Nate Wiger
 url: http://www.nateware.com
 email: natewareblog@gmail.com
 title: Nate Wiger vs Technology
-subtitle: Code always works better after a few beers
+subtitle: Musings on software
 # http://stackoverflow.com/questions/16422933/how-do-i-use-markdownify-in-jekyll-to-show-an-excerpt-on-the-index
 excerpt_separator: <!--more-->
 # see footer.html
 google_analytics: UA-23188280-1
+plugins: [jekyll-paginate]

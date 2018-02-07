@@ -11,6 +11,8 @@ GEM
     aws-sdk-resources (2.10.127)
       aws-sdk-core (= 2.10.127)
     aws-sigv4 (1.0.2)
+    classifier-reborn (2.2.0)
+      fast-stemmer (~> 1.0)
     colorator (1.1.0)
     colored (1.2)
     concurrent-ruby (1.0.5)
@@ -24,6 +26,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.5)
+    fast-stemmer (1.0.2)
     ffi (1.9.21)
     forwardable-extended (2.6.0)
     haml (5.0.4)
@@ -49,6 +52,7 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-watch (2.0.0)
@@ -92,10 +96,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  classifier-reborn
   haml
   hpricot
   jammit
   jekyll
+  jekyll-paginate
   pygments.rb
   s3_website
   sass
