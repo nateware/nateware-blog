@@ -9,7 +9,7 @@ author: Nate Wiger
 # needs to match real URL after redirects from root etc. affects Disqus.
 url: http://www.nateware.com
 email: natewareblog@gmail.com
-title: Nate Wiger vs Technology
+title: Nate Wiger in San Diego, CA
 subtitle: Musings on software
 # http://stackoverflow.com/questions/16422933/how-do-i-use-markdownify-in-jekyll-to-show-an-excerpt-on-the-index
 excerpt_separator: <!--more-->
