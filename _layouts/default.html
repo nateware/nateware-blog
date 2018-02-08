@@ -1,7 +1,8 @@
 {% include header.html %}
 
 <div class="row-fluid">
-  <div class="span9">
+  {% include bio_topbar.html %}
+  <div>
     <div class="index-content">
      {{content}}
     </div>
@@ -9,9 +10,6 @@
       Powered by Jekyll plus Twitter Bootstrap deployed to S3.
       <a href="jekyll-plus-twitter-bootstrap-on-s3.html">Read more about my setup</a>.
     </div -->
-  </div>
-  <div class="span3">
-     {% include bio_sidebar.html %}
   </div>
 </div>
 

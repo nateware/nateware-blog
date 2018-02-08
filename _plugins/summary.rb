@@ -28,7 +28,7 @@ module Jekyll
   # Use like: {{content | minus_summary}}
   module Filters
     def minus_summary(content)
-      '<p>' + content.gsub(/.*<!--\s*more\s*-->/m, '')
+      '<p>' + content.gsub(/.*\<!--\s*more\s*--\>/ms, '')
     end
     def strip_p(content)
       content.gsub(%r(</*p>),'')
