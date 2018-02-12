@@ -10,9 +10,9 @@ tags:
 Many people go their whole lives without finding their [doppleganger](http://www.answers.com/doppelganger "look it up!"), but not me. By chance last weekend I picked up a New York Times and flipped to the Business section. There, staring back at me, was this!
 <!--more-->
 <p class="center">
-  <a href="images/newspaper-doppleganger.jpg"><img
+  <a href="images/nytimes-doppelganger.jpg"><img
     class="size-medium aligncenter" title="My doppelganger... we ARE related!"
-      src="images/newspaper-doppleganger.jpg" alt="Nate's doppleganger"></a></p>
+      src="images/nytimes-doppelganger.jpg" alt="Nate's doppelganger"></a></p>
 
 I've been so absent-minded lately, that I thought it may actually _be_ me. Did I go to London last week to protest? If it wasn't me, who was this protester, this anti-Nate that had surfaced? I mean, I know I'm part British, but I didn't realize it was _that_ big a part.
 
